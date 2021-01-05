@@ -114,6 +114,9 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         }
         i++;
       }
+      else {
+        await Future<void>.delayed(Duration(milliseconds: 500));
+      }
     }
   }
 
