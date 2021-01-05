@@ -110,10 +110,10 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       if(started) {
         if (isSimple(i)) {
           callerSendPort.send(i);
+          await Future<void>.delayed(Duration(milliseconds: 500));
         }
         i++;
       }
-      await Future<void>.delayed(Duration(milliseconds: 500));
     }
   }
 
